@@ -1,0 +1,1307 @@
+/* Stili generali */
+body {
+    font-family: Garamond, serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden; /* Impedisce lo scorrimento laterale */
+} 
+
+.servizi-page {
+    background-color: white; /* Imposta lo sfondo bianco */
+    color: black; /* Modifica il colore del testo per contrastare lo sfondo */
+}
+
+
+/* Barra in alto */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    padding: 0px;
+	position: fixed; /* Rende la barra fissa */
+    top: 0; /* Posiziona la barra in alto */
+    width: 100%; /* Fa in modo che la barra occupi tutta la larghezza della pagina */
+    z-index: 1000; /* Assicura che la barra sia sopra altri elementi */
+}
+
+
+.logo {
+    flex: 1;
+	margin-left: 150px;
+    margin-right: -50px; /* Aggiunge spazio tra il logo e il resto della barra */
+
+}
+.logo-img {
+    height: 120px;
+	margin: 0; /* Elimina margini esterni dell'immagine */
+    padding: 0; /* Elimina padding interno dell'immagine */
+  /*  vertical-align: middle; Allinea l'immagine verticalmente al centro */
+
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    margin: 0 20px;
+}
+/* Stile generale per i link del menu */
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #000; /* Sfondo nero iniziale */
+    border-radius: 10px; /* Bordi stondati */
+    transition: all 1.5s ease; /* Transizione fluida */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ombra per effetto di profondità */
+}
+
+/* Effetto hover con profondità e cambio di colore */
+.menu ul li a:hover {
+    background-color: #262626; /* Colore di sfondo leggermente diverso per l'effetto di pressione */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Riduce l'ombra per dare l'effetto di pressione */
+    transform: translateY(0px); /* Non muovere fisicamente il pulsante */
+	    padding: 10px 20px; /* Mantieni il padding uguale, così non si ingrandisce */
+		border-radius: 100px;
+		border: 1px solid black;
+
+}
+
+.buttons {
+    flex: 1;
+    text-align: right;
+}
+
+
+/*ICONE SOCIAL*/
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-right: 90px; /* Per distanziarle dai bordi */
+}
+
+.social-icons img {
+    width: 32px; /* Dimensione dell'icona */
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    order: 2; /* Assicura che sia allineato a destra */
+}
+
+
+
+
+
+
+/* Carosello */
+.carousel {
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /* Nascondi le immagini che non sono visibili */
+    position: relative;
+    padding: 0;
+    line-height: 0; /* Elimina eventuali spazi tra gli elementi inline */
+	background-color: black; /* Imposta lo sfondo del carosello su nero */
+
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.carousel-text {
+    position: absolute;
+    top: 20%; /* Regola la posizione verticale */
+    left: 13%; /* Regola la posizione orizzontale */
+    color: white;
+    text-align: left;
+    z-index: 10; /* Assicura che sia sopra le immagini */
+    pointer-events: none; /* Evita che il testo interferisca con il carosello */
+}
+
+.carousel-text h1 {
+    color: red;
+    font-size: 5em; /* Dimensione del testo A.I.M. */
+    margin: 0;
+}
+
+.carousel-text p {
+    color: white;
+    font-size: 1.8em; /* Dimensione del testo Applied Innovation Management */
+    margin: 0;
+}
+
+
+/* Effetto digitazione per A.I.M. (senza cursore alla fine) */
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid red;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end), blink-caret 0.7s step-end 3; /* Lampeggia solo 3 volte */
+    animation-fill-mode: forwards;
+}
+
+
+.typewriter2 {
+    overflow: hidden;
+    border-right: 0.15em solid red;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end), blink-caret 0.7s step-end 3; /* Lampeggia solo 3 volte */
+    animation-fill-mode: forwards;
+}
+
+
+
+/* Keyframes per il cursore lampeggiante (prima riga) */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: red; }
+}
+
+/* Keyframes per digitazione con visibilità */
+@keyframes typing {
+    0% { visibility: visible; }
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes per digitazione con delay per la seconda scritta */
+@keyframes typing-delay {
+    0% { visibility: visible; } /* Rende il testo visibile all’inizio dell’animazione */
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Nasconde tutte le immagini inizialmente */
+.slides {
+    display: none; 
+}
+
+/* Stile aggiornato per ridurre la dimensione delle immagini */
+.slides img {
+    width: 100%; /* Riduce la larghezza delle immagini all'80% del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover;
+    margin: 0 auto; /* Centra le immagini orizzontalmente */
+	
+}
+
+/* Mostra la prima immagine */
+.slides:first-child {
+    display: block; /* Mostra la prima immagine all'inizio */
+}
+
+/* Aggiungi l'animazione di dissolvenza */
+.fade {
+    animation-name: fade;
+    animation-duration: 0.8s; /* Durata della dissolvenza */
+}
+
+@keyframes fade {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+/* Imposta l'immagine del carosello come blocco per evitare spazi */
+.carousel img {
+    display: block;
+    height: auto;
+}
+
+
+
+.black-bar {
+    background-color: black;
+    height: 300px; /* Puoi modificare l'altezza della barra come preferisci */
+    width: 100%;
+    margin: 0; /* Rimuove eventuali margini */
+    padding: 0; /* Rimuove eventuali padding */
+}
+
+.black-bar2 {
+    background-color: darkblue;
+    height: 4px; /* Puoi modificare l'altezza della barra come preferisci */
+    width: 100%;
+}
+
+
+.black-bar3 {
+    background-color: #da0000;
+    height: 5px; /* Puoi modificare l'altezza della barra come preferisci */
+    width: 100%;
+}
+
+.white-bar {
+    background-color: white;
+    height: 2px; /* Puoi modificare l'altezza della barra come preferisci */
+    width: 95%;
+	margin-top: 25px;
+}
+
+.black-bar4 {
+    background-color: black;
+    height: 85px; /* Puoi modificare l'altezza della barra come preferisci */
+    width: 100%;
+	margin-top: -52px; /* Spaziatura sopra la barra nera (tra testo e barra) */
+    margin-bottom: 50px; /* Spaziatura sotto la barra nera (tra la barra e il footer) */
+}
+
+.black-bar5 {
+    background-color: black;
+    height: 125px; /* Puoi modificare l'altezza della barra come preferisci */
+    width: 100%;
+}
+
+/*
+
+/* Sezione di contenuto */
+
+
+/* Stile generale per la sezione di contenuto */
+.contenthome {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+
+/* Immagine nella parte destra */
+.image {
+    flex: 1;
+    padding-left: 40px; /* Aggiunge uno spazio tra il testo e l'immagine */
+}
+
+.image img {
+  width: 100%;
+   height: auto;
+}
+
+
+/* Stili per l'animazione di scorrimento laterale */
+.contenthome {
+    opacity: 0; /* Nascondi inizialmente */
+    transform: translateX(100%); /* Posiziona fuori schermo a sinistra */
+    transition: transform 1s ease, opacity 1s ease; /* Aggiungi una transizione per farlo apparire gradualmente */
+}
+
+ /*Classe attivata quando la sezione entra in vista */
+.contenthome.visible {
+    opacity: 1; /* Mostra la sezione */
+    transform: translateX(0); /* Porta la sezione nella sua posizione normale */
+}
+
+/* Stili per l'animazione di scorrimento laterale */
+.contenthome2 {
+    opacity: 0; /* Nascondi inizialmente */
+    transform: translateX(-100%); /* Posiziona fuori schermo a sinistra */
+    transition: transform 1s ease, opacity 1s ease; /* Aggiungi una transizione per farlo apparire gradualmente */
+}
+
+/* Classe attivata quando la sezione entra in vista */
+.contenthome2.visible {
+    opacity: 1; /* Mostra la sezione */
+    transform: translateX(0); /* Porta la sezione nella sua posizione normale */
+}
+
+/*BOXTESTO 2 */
+
+/* Stile generale per la sezione di contenuto */
+.contenthome2 {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte l'ordine: immagine a sinistra e testo a destra */
+    justify-content: space-between;
+}
+
+/* Immagine nella parte destra */
+.image {
+    flex: 1;
+    padding-right: 20px; /* Aggiunge uno spazio tra il testo e l'immagine */
+}
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/*BOOOOOOOOOOOOOOOOOOOOOOOOOOOOX*/
+
+
+
+/* Sezione dei box home */
+.contenthome {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #000;
+}
+
+.home-title {
+    text-align: center;
+    font-size: 4em; /* Dimensione del testo, modifica secondo le tue preferenze */
+    margin-bottom: 0px; /* Distanza tra il titolo e le icone */
+    color: red; /* Colore del testo, modifica come desideri */
+	font-family:  Garamond, serif; /* Font Monospace Monaco */
+}
+
+.boxes-containerhome, .boxes-containerhome2 {
+    display: flex;
+    flex-direction: column; /* Dispone i box verticalmente */
+    align-items: center; /* Centra i box */
+    gap: 20px; /* Spazio verticale tra i box */
+    width: 100%; /* Assicura che occupino l'intera larghezza */
+   /* max-width: 900px; Limita la larghezza totale per l'impaginazione */
+    margin: 0 auto; /* Centra il contenitore */
+}
+
+
+
+/* Contenitore dei riquadri */
+.boxes-containerhome {
+    display: flex;
+    flex-direction: column; /* Dispone i box uno sotto l'altro */
+    align-items: center; /* Centra i box nella sezione */
+    gap: 20px; /* Spazio tra i riquadri */
+}
+
+/* Riquadro di servizio, con immagine a destra e testo a sinistra */
+.text-boxhome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Occupa tutta la larghezza del contenitore */
+    max-width: 1900px; /* Limita la larghezza massima per migliorare la leggibilità */
+    padding: 100px;
+    background-color: #222;
+    color: white;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-family: Garamond, serif;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+/* Stile per la parte di testo */
+.text-contenthome {
+    flex: 1;
+}
+
+/* Stile per l'immagine all'interno del riquadro */
+.text-boxhome img {
+	width: 70%; /* L'immagine occupa tutta la larghezza disponibile */
+    max-width: 70%; /* Limita la larghezza massima */
+    height: auto;
+    margin-left: 20px;
+	object-fit: contain; /* Evita che le immagini vengano tagliate */
+	padding: 10px; /* Aggiunge uno spazio interno per sicurezza */
+}
+
+
+
+/* Contenitore dei riquadri */
+.boxes-containerhome2 {
+    display: flex;
+    flex-direction: column; /* Dispone i box uno sotto l'altro */
+    align-items: center; /* Centra i box nella sezione */
+    gap: 20px; /* Spazio tra i riquadri */
+   background-color: black; /* sfondo dietro immagine box 2 home */
+}
+
+/* Riquadro di servizio, con immagine a destra e testo a sinistra */
+.text-boxhome2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Occupa tutta la larghezza del contenitore */
+    max-width: 1900px; /* Limita la larghezza massima per migliorare la leggibilità */
+    padding: 100px;
+    background-color: #222;
+    color: white;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-family: Garamond, serif;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+/* Stile per la parte di testo */
+.text-contenthome2 {
+    flex: 1;
+}
+
+/* Stile per l'immagine all'interno del riquadro */
+.text-boxhome2 img {
+	
+	width: 70%; /* L'immagine occupa tutta la larghezza disponibile */
+    max-width: 70%; /* Limita la larghezza massima */
+    height: auto;
+    margin-left: 20px;
+	object-fit: contain; /* Evita che le immagini vengano tagliate */
+	padding: 10px; /* Aggiunge uno spazio interno per sicurezza */
+}
+
+
+.text-boxhome img, .text-boxhome2 img {
+  /*  width: 50%; Occupa il 50% della larghezza del contenitore */
+   /* max-width: 400px; Limita ulteriormente la larghezza massima */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: contain; /* Assicura che l'immagine non venga tagliata */
+    margin: 0 auto; /* Centra l'immagine */
+    padding: 10px; /* Spaziatura interna */
+}
+
+
+.text-boxhome,.text-boxhome2 {
+    min-height: 300px; /* Altezza minima uniforme */
+}
+
+.text-contenthome,.text-contenthome2 {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+
+
+/*--------------------------------------------*/
+.home-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.home-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spazio tra i riquadri */
+    margin-bottom: 20px; /* Spazio tra le righe */
+}
+
+.home-item {
+    width: 250px; /* Dimensione fissa per il riquadro */
+    height: 200px; /* Altezza fissa per il riquadro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd; /* Bordo per il riquadro */
+    border-radius: 8px; /* Bordo arrotondato per i riquadri */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effetto ombra per il riquadro */
+    padding: 10px;
+    background-color: #fff;
+}
+
+.home-item img {
+    width: 160px; /* Dimensione dell'icona */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.home-item p {
+    font-size: 14px;
+    color: #d9534f; /* Colore del testo sotto l'icona */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0; /* Elimina il margine aggiuntivo */
+    text-align: center;
+}
+
+
+
+
+/* Barra in basso */
+.footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+	font-size: 15px;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo .logo-img {
+    height: 100px;
+}
+.footer-logo p {
+    margin-top: 40px;
+}
+
+
+
+
+
+/*------------------------------------------------------*/
+
+/*Sezione CHI SIAMO*/
+
+
+.about-image-container {
+    position: relative;
+    text-align: center;
+	background-color: black;
+}
+
+.about-image {
+    width: 80%;
+    height: auto;
+}
+
+.about-image-text {
+    position: absolute;
+    top: 20%; /* Posiziona la scritta al centro verticale dell'immagine */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 120px; /* Dimensione del testo, modifica come preferisci */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo per visibilità */
+	background-color: black;
+}
+
+.about-text-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto; /* Centro e margine verticale */
+    padding: 20px;
+    font-size: 30px;
+    line-height: 1.6;
+	border: 0px solid grey;
+	background-color: black;
+	color: white;
+	font-family:  Garamond, serif; /* Font Monospace Monaco */
+}
+.about-section {
+    background-color: black; /* Sfondo nero per l'intera sezione */
+    color: white; /* Colore del testo bianco per contrastare */
+    padding: 20px 0;
+}
+
+.about-text-box {
+    width: 80%; /* Aumenta la larghezza del box di testo */
+    margin: 20px auto; /* Centro e margine verticale */
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background-color: transparent; /* Nessun colore di sfondo */
+    color: white;
+}
+
+
+
+
+
+/* Stile generale per la sezione 'Chi siamo' */
+.contentabout {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+	background-color: #000;
+
+}
+
+/* Sezione 'Chi siamo' con immagine in alto e testo sotto */
+.contentabout {
+    display: block;
+    padding: 50px 0px; /* Spaziatura verticale */
+}
+
+/* Immagine in alto */
+.contentabout .image1 {
+    text-align: center; /* Centra l'immagine */
+    margin-bottom: 20px; /* Spazio tra immagine e testo */
+}
+
+.contentabout .image1 img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Immagine in alto */
+.contentabout .image2 {
+    text-align: center; /* Centra l'immagine */
+    margin-bottom: 20px; /* Spazio tra immagine e testo */
+}
+
+.contentabout .image2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Box di testo in basso */
+.contentabout .text-box {
+    padding: 20px;
+    border: 0px solid grey;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 50%; /* Riduce la larghezza */
+    margin: 0 auto; /* Centra il box */
+    font-family:  Garamond, serif; /* Font Monospace Monaco */
+    font-size: 28px; /* Aumenta la dimensione del testo */
+}
+
+
+/* Barra nera sotto */
+.black-bar {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+.image-text-section {
+    display: flex; /* Allinea immagine e testo fianco a fianco */
+    align-items: center; /* Allinea verticalmente al centro */
+    padding: 20px;
+	border: 50px solid black; /* Cornice grigia */
+	padding-left: 60px;
+	background-color: black; /* Sfondo nero */
+
+}
+
+.image-container {
+    flex: 1; /* Occupa metà della larghezza della sezione */
+}
+
+.image-container img {
+    width: 70%; /* L'immagine occupa tutta la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+.text-container {
+    flex: 1; /* Occupa l'altra metà della larghezza */
+    padding-left: 0px; /* Aggiunge spazio tra testo e immagine */
+	font-family:  Garamond, serif; /* Font Monospace Monaco */
+    text-align: justify; /* Testo centrato */
+    font-size: 28px; /* Aumenta la dimensione del testo */
+    padding-right: 60px; /* Aggiunge un margine destro per centrare meglio */
+	color: white; /* Colore del testo bianco per contrastare lo sfondo nero */
+
+}
+.text-container h2 {
+    margin-top: 0; /* Elimina il margine superiore del titolo */
+}
+
+
+
+
+
+
+/*Animazione cerchi numeri*/
+/* Stile generale per la sezione dei numeri */
+.numbers-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.number-box {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+/* Posizionamento del numero sopra al cerchio */
+.number-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px; /* Spaziatura tra il numero e il cerchio */
+}
+
+.number-box p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px; /* Aggiungi spazio tra la scritta e il numero */
+}
+
+/* Stile per i cerchi SVG */
+.circle-chart {
+    width: 120px;
+    height: 120px;
+}
+
+/* Colore di sfondo del cerchio */
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+/* Colore della circonferenza animata */
+.circle {
+    fill: none;
+    stroke-width: 3.8;
+    stroke: red; /* Cambia qui il colore del cerchio */
+    stroke-linecap: round;
+    animation: progress 2s ease-out forwards;
+}
+
+/* Animazione del progresso del cerchio */
+@keyframes progress {
+    from {
+        stroke-dasharray: 0 100;
+    }
+}
+
+
+
+/*Sezione SERVIZI*/
+
+/* Sezione dei servizi */
+.contentservices {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #000;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 4em; /* Dimensione del testo, modifica secondo le tue preferenze */
+    margin-bottom: 0px; /* Distanza tra il titolo e le icone */
+    color: red; /* Colore del testo, modifica come desideri */
+	font-family:  Garamond, serif; /* Font Monospace Monaco */
+}
+
+
+/* Contenitore dei riquadri */
+.boxes-container {
+    display: flex;
+    flex-direction: column; /* Dispone i box uno sotto l'altro */
+    align-items: center; /* Centra i box nella sezione */
+    gap: 20px; /* Spazio tra i riquadri */
+}
+
+/* Riquadro di servizio, con immagine a destra e testo a sinistra */
+.text-boxservizi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Occupa tutta la larghezza del contenitore */
+    max-width: 1900px; /* Limita la larghezza massima per migliorare la leggibilità */
+    padding: 100px;
+    background-color: red;
+    color: white;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: Garamond, serif;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+/* Stile per la parte di testo */
+.text-content {
+    flex: 1;
+}
+
+/* Stile per l'immagine all'interno del riquadro */
+.text-boxservizi img {
+    width: 800px;
+    height: auto;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+/* Contenitore dei riquadri */
+.boxes-container2 {
+    display: flex;
+    flex-direction: column; /* Dispone i box uno sotto l'altro */
+    align-items: center; /* Centra i box nella sezione */
+    gap: 20px; /* Spazio tra i riquadri */
+}
+
+/* Riquadro di servizio, con immagine a destra e testo a sinistra */
+.text-boxservizi2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Occupa tutta la larghezza del contenitore */
+    max-width: 1900px; /* Limita la larghezza massima per migliorare la leggibilità */
+    padding: 100px;
+    background-color: #222;
+    color: white;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: Garamond, serif;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+/* Stile per la parte di testo */
+.text-content2 {
+    flex: 1;
+}
+
+/* Stile per l'immagine all'interno del riquadro */
+.text-boxservizi2 img {
+    width: 800px;
+    height: auto;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------*/
+.services-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.services-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spazio tra i riquadri */
+    margin-bottom: 20px; /* Spazio tra le righe */
+}
+
+.service-item {
+    width: 250px; /* Dimensione fissa per il riquadro */
+    height: 200px; /* Altezza fissa per il riquadro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd; /* Bordo per il riquadro */
+    border-radius: 8px; /* Bordo arrotondato per i riquadri */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effetto ombra per il riquadro */
+    padding: 10px;
+    background-color: #fff;
+}
+
+.service-item img {
+    width: 160px; /* Dimensione dell'icona */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #d9534f; /* Colore del testo sotto l'icona */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0; /* Elimina il margine aggiuntivo */
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Sezione CONTATTI*/
+
+/* Stile per la sezione dei servizi */
+.contentcontatti {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #000; /* Sfondo nero per il contrasto */
+}
+
+/* Immagine nella sezione servizi */
+.contentcontatti .image img {
+    width: 70%; /* Dimensione dell'immagine */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Box di testo nella sezione servizi */
+.contentcontatti .text-box {
+    padding: 20px;
+    color: white;
+    background-color: #222; /* Colore di sfondo del testo */
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid grey;
+    text-align: center;
+}
+
+
+
+/* Imposta il box-sizing per tutti gli elementi */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Assicurati che tutti i contenitori siano responsivi */
+.container, .navbar, .text-boxservizi, .text-boxservizi2 {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Navbar ottimizzata per mobile */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+/* Ottimizzazione delle immagini all'interno dei box */
+.text-boxservizi img, .text-boxservizi2 img {
+    width: 100%;
+    max-width: 95%;
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: contain; /* Evita il taglio delle immagini */
+    margin: 20px auto; /* Centra l'immagine e aggiunge spazio */
+}
+
+
+
+
+/* Ottimizzazione delle sezioni con immagini e testo affiancati */
+.text-boxservizi, .text-boxservizi2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1900px;
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 20px; /* Spazio tra testo e immagine */
+    overflow: hidden;
+}
+
+/* Ridimensiona le immagini */
+.text-boxservizi img, .text-boxservizi2 img {
+    width: 45%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+
+/*sezione PRIVACY*/
+
+.privacy-content {
+    text-align: left; /* Allinea tutto il testo a sinistra */
+    padding: 20px; /* Spaziatura interna */
+    margin: 0 auto; /* Centra il contenitore */
+    max-width: 800px; /* Limita la larghezza massima del contenuto */
+    font-family: Arial, sans-serif; /* Imposta un font leggibile */
+    color: white; /* Colore del testo bianco */
+    background-color: black; /* Sfondo nero */
+}
+
+.privacy-content h1, 
+.privacy-content h2 {
+    color: #e0e0e0; /* Colore dei titoli */
+    font-weight: bold; /* Grassetto per i titoli */
+    margin-bottom: 15px; /* Spazio sotto i titoli */
+}
+
+.privacy-content ul {
+    list-style-type: disc; /* Aggiungi punti elenco */
+    padding-left: 20px; /* Indenta i punti elenco */
+}
+
+.privacy-content p {
+    margin-bottom: 10px; /* Spazio tra i paragrafi */
+    line-height: 1.6; /* Aumenta l'interlinea per leggibilità */
+}
+
+
+
+
+
+/*sezione COOKIE*/
+
+.cookie-content {
+    text-align: left; /* Allinea tutto il testo a sinistra */
+    padding: 20px; /* Spaziatura interna */
+    margin: 0 auto; /* Centra il contenitore */
+    max-width: 800px; /* Limita la larghezza massima del contenuto */
+    font-family: Arial, sans-serif; /* Imposta un font leggibile */
+    color: white; /* Colore del testo bianco */
+    background-color: black; /* Sfondo nero */
+}
+
+.cookie-content h1, 
+.cookie-content h2 {
+    color: #e0e0e0; /* Colore dei titoli */
+    font-weight: bold; /* Grassetto per i titoli */
+    margin-bottom: 15px; /* Spazio sotto i titoli */
+}
+
+.cookie-content ul {
+    list-style-type: disc; /* Aggiungi punti elenco */
+    padding-left: 20px; /* Indenta i punti elenco */
+}
+
+.cookie-content p {
+    margin-bottom: 10px; /* Spazio tra i paragrafi */
+    line-height: 1.6; /* Aumenta l'interlinea per leggibilità */
+}
+
+
+
+
+
+/*Cookie banner*/
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.cookie-banner p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.cookie-banner a {
+    color: LightGray;
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    margin-top: 10px;
+}
+
+.cookie-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: LightGray;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.cookie-buttons button:hover {
+    background-color: LightGray;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------media */
+
+
+/* Ottimizzazione per schermi più piccoli */
+@media (max-width: 768px) {
+    .text-boxservizi {
+        flex-direction: column; /* Passa a una disposizione a colonna */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .text-boxservizi img{
+        width: 90%; /* Riduce la larghezza delle immagini */
+        max-width: 300px; /* Limita la dimensione massima */
+        margin-bottom: 20px;
+		 margin-left: 0;
+        margin-top: 10px;
+    }
+    .text-content{
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Ridimensiona ulteriormente le immagini su schermi piccoli */
+@media (max-width: 768px) {
+    .text-boxservizi2 img {
+        width: 90%;
+        max-width: 300px; /* Limita la dimensione massima per schermi piccoli */
+        height: auto;
+        object-fit: contain;
+		 margin-right: 0;
+        margin-top: 10px;
+    }
+	
+    .text-boxservizi2 {
+        flex-direction: column;
+        align-items: right;
+        text-align: right;
+    }
+
+   .text-content2 {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px; /* Riduce il padding per dispositivi piccoli */
+    }
+
+    .logo {
+        margin-left: 5px; /* Rimuove margini eccessivi */
+        margin-right: 0px;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Dispone i link del menu in colonna */
+        align-items: center;
+        padding: 0;
+
+    }
+
+    .menu ul li {
+        margin: 10px 0; /* Aggiunge spazio tra i link */
+    }
+	    .menu {
+        justify-content: center; /* Centra il menu */
+    }
+    .buttons {
+        text-align: center; /* Centra i pulsanti */
+    }
+	
+	
+}
+
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+    .text-boxhome {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+		/*width: 60%;  Riduce la larghezza del box */
+        /* padding: 8px; Riduce il padding interno */
+    }
+}
+
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+    .text-boxhome2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+		/*width: 60%; Riduce la larghezza del box */
+        /* padding: 8px; Riduce il padding interno */
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+     .text-boxhome img, .text-boxhome2 img{
+		 
+        width: 70%; /* Assicura che l'immagine occupi al massimo la larghezza del contenitore */
+        max-width: 250px; /* Limita ulteriormente la dimensione massima */
+        height: auto; Mantiene le proporzioni */
+        object-fit: contain; /* Assicura che l'immagine non venga tagliata */
+        margin: 0 auto; /* Centra l'immagine */
+		margin-left: 0;
+    }
+}
+
+	
+	
+	
+
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 80%; /* Limita la larghezza massima del logo */
+        height: auto; /* Mantiene le proporzioni */
+
+    }
+}
+
+
+
+
+img {
+    loading: lazy;
+}
+
